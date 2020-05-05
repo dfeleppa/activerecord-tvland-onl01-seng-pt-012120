@@ -5,7 +5,7 @@ class Show < ActiveRecord::Base
   
   def actors_list
       actorss.collect do |actor|
-        "#{character.name} - #{character.show.name}"
-      end.join('')
+        "#{actor.first_name} - #{actor.lastname}"
+      end.join(' ')
   end
 end
